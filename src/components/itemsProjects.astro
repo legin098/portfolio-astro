@@ -1,0 +1,33 @@
+---
+import Tecnologies from "./tecnologies.astro";
+
+interface Tecnologie {
+  url: string;
+  alt: string;
+}
+
+interface Props {
+  id: number;
+  title: string;
+  desc: string;
+  techs: Array<Tecnologie>;
+  code: string;
+  liveView: string;
+}
+
+const { code, desc, id, liveView, techs, title } = Astro.props;
+---
+
+<article>
+  <header>
+    {title}
+  </header>
+  <p>
+    {desc}
+  </p>
+  <Tecnologies tecnologies={techs} />
+  <div>
+    <a href={liveView}>Live view</a>
+    <a href={code}>Code</a>
+  </div>
+</article>
