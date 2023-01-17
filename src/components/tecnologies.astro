@@ -1,4 +1,13 @@
 ---
+interface Tecnologie {
+  url: string;
+  alt: string;
+}
+
+interface Props {
+  tecnologies: Array<Tecnologie>;
+}
+
 const { tecnologies } = Astro.props;
 ---
 
