@@ -1,13 +1,35 @@
 ---
-
-import Profile from '../assets/book.jpg'
-
+import Profile from "../assets/book.jpg";
 ---
 
-<picture>
-  <img src={Profile} alt="my photo" width="128" height="128" />
+<picture class="picture">
+  <img src={Profile} alt="my photo" />
 </picture>
 
-<style scoped>
+<style>
+  .picture {
+    width: 8rem;
+    height: 8rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 9999px;
+  }
 
+  .picture img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 9999px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .picture {
+      width: 12rem;
+      height: 12rem;
+    }
+
+    .picture img {
+      width: 12rem;
+      height: 12rem;
+    }
+  }
 </style>
