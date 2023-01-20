@@ -4,60 +4,98 @@ import ItemsProjects from "./itemsProjects.astro";
 const mockData = [
   {
     id: 0,
-    title: 'Fast',
-    desc: 'handle',
-    techs: [{url: '', alt: ''}],
-    code: '',
-    liveView: ''
+    title: "Fast",
+    desc: "An application developed for testing purposes with React Native and Expo to have access to all service providers from Nueva Esparta. Venezuela.",
+    techs: [{ url: "", alt: "" }],
+    code: "",
+    liveView: "",
   },
   {
     id: 1,
-    title: 'Fast',
-    desc: 'handle',
-    techs: [{url: '', alt: ''}],
-    code: '',
-    liveView: ''
+    title: "Fast",
+    desc: "An application developed for testing purposes with React Native and Expo to have access to all service providers from Nueva Esparta. Venezuela.",
+    techs: [{ url: "", alt: "" }],
+    code: "",
+    liveView: "",
   },
   {
     id: 2,
-    title: 'Fast',
-    desc: 'handle',
-    techs: [{url: '', alt: ''}],
-    code: '',
-    liveView: ''
+    title: "Fast",
+    desc: "An application developed for testing purposes with React Native and Expo to have access to all service providers from Nueva Esparta. Venezuela.",
+    techs: [{ url: "", alt: "" }],
+    code: "",
+    liveView: "",
   },
   {
     id: 3,
-    title: 'Fast',
-    desc: 'handle',
-    techs: [{url: '', alt: ''}],
-    code: '',
-    liveView: ''
+    title: "Fast",
+    desc: "An application developed for testing purposes with React Native and Expo to have access to all service providers from Nueva Esparta. Venezuela.",
+    techs: [{ url: "", alt: "" }],
+    code: "",
+    liveView: "",
   },
   {
     id: 4,
-    title: 'Fast',
-    desc: 'handle',
-    techs: [{url: '', alt: ''}],
-    code: '',
-    liveView: ''
+    title: "Fast",
+    desc: "An application developed for testing purposes with React Native and Expo to have access to all service providers from Nueva Esparta. Venezuela.",
+    techs: [{ url: "", alt: "" }],
+    code: "",
+    liveView: "",
   },
   {
     id: 5,
-    title: 'Fast',
-    desc: 'handle',
-    techs: [{url: '', alt: ''}],
-    code: '',
-    liveView: ''
-  }
-]
+    title: "Fast",
+    desc: "An application developed for testing purposes with React Native and Expo to have access to all service providers from Nueva Esparta. Venezuela.",
+    techs: [{ url: "", alt: "" }],
+    code: "",
+    liveView: "",
+  },
+];
 ---
 
-<section>
-  <h2>Proyectos</h2>
+<section class="projects">
+  <h2>📚 Projects</h2>
   <section>
-    {
-      mockData.map(project => <ItemsProjects {...project} />)
-    }
+    {mockData.map((project) => <ItemsProjects {...project} />)}
   </section>
 </section>
+
+<style>
+  .projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .projects h2 {
+    width: 100%;
+    font-weight: 800;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .projects section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 768px) {
+    .projects section {
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 0 2rem;
+    }
+
+    .projects h2 {
+      padding: 1.5rem;
+    }
+  }
+
+  @media screen and (min-width: 920px) {
+    .projects h2 {
+      padding: 0 2rem;
+    }
+  }
+</style>

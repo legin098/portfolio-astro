@@ -1,17 +1,43 @@
 ---
-import Home from '../components/home.astro'
+import Home from "../components/home.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href="/css/reset.css" />
-		<title>Portfolio</title>
-	</head>
-	<body>
-		<Home />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <div class="body">
+      <Home />
+    </div>
+  </body>
 </html>
+
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(246, 255, 248);
+  }
+
+  .body {
+    width: 90%;
+  }
+
+  @media screen and (min-width: 1020px) {
+    .body {
+      width: 90%;
+    }
+  }
+
+	@media screen and (min-width: 1320px) {
+    .body {
+      width: 80%;
+    }
+  }
+</style>

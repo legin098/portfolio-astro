@@ -1,8 +1,48 @@
 ---
-
+import LinkedinLogo from "../assets/linkedin.svg";
+import GithubLogo from "../assets/github.svg";
+import MailLogo from "../assets/mail.svg";
 ---
 
-<div>
-  <picture>Github</picture>
-  <picture>LinkedIn</picture>
+<div class="socials">
+  <picture class="content_svg">
+    <a href="https://github.com/legin098" target="_blank">
+      <img src={GithubLogo} alt="github logo" width="30" height="30" />
+    </a>
+  </picture>
+  <picture class="content_svg">
+    <a
+      href="https://www.linkedin.com/in/jesusantoniocruzsuarez-desarrollador/"
+      target="_blank"
+    >
+      <img src={LinkedinLogo} alt="linkedin logo" width="30" height="30" />
+    </a>
+  </picture>
+  <picture class="content_svg">
+    <a href="mailto:cruzsuarezjesusantonio@gmail.com" target="_blank" class="mail">
+      <img src={MailLogo} alt="mail logo" width="30" height="30" />
+    </a>
+  </picture>
 </div>
+
+<style>
+  .socials {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .content_svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .mail {
+    margin-top: 2px;
+  }
+  @media screen and (min-width: 1020px) {
+    .socials {
+      justify-content: flex-end;
+    }
+  }
+</style>

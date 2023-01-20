@@ -2,10 +2,63 @@
 import Social from "./social.astro";
 ---
 
-<section>
-  <h1>Jesus Cruz</h1>
-  <h3><span>Front-end</span> Developer</h3>
+<section class="content_title">
+  <h1>Jesus Cruz Suarez</h1>
+  <h3><span>Front-end</span> Developer 👨‍💻</h3>
   <Social />
 </section>
 
-<style scoped></style>
+<style>
+  .content_title {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgb(107, 144, 128);
+  }
+
+  .content_title h1,
+  .content_title h3 {
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .content_title h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .content_title h3 {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .content_title h3 > span {
+    color: rgb(107, 144, 128);
+  }
+
+  @media screen and (min-width: 768px) {
+    .content_title h1 {
+      font-size: 3.75rem;
+      line-height: 1;
+    }
+
+    .content_title h3 {
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+    }
+  }
+
+  @media screen and (min-width: 1020px) {
+    .content_title {
+      width: 97%;
+    }
+
+    .content_title h1,
+    .content_title h3 {
+      text-align: left;
+    }
+  }
+</style>

@@ -1,9 +1,39 @@
 ---
 ---
 
-<footer>
-  <p>search a good text</p>
-  <div>
-    hecho ❤️ 🌎
+<footer class="footer">
+  <p>
+    <cite>
+      "You can't build great software without a great team, and most development
+      teams behave like dysfunctional families"
+    </cite>
+    <p>- Jim McCarthy</p>
+  </p>
+  <div class="msg">
+    <cite>Developed by <span class="dev">Jesus Cruz Suarez</span></cite> 👤🌎
   </div>
 </footer>
+
+<style>
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+  }
+
+  .footer p {
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .msg {
+    margin-top: 1.5rem;
+    font-weight: 700;
+  }
+
+  .dev {
+    color: rgb(107, 144, 128);
+  }
+</style>

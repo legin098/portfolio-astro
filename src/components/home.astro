@@ -6,8 +6,8 @@ import Projects from "./projects.astro";
 import { COLORS } from "../styles/colors";
 ---
 
-<div class="container" style={`background-color: ${COLORS.MintCream}`}>
-  <main>
+<div class="container">
+  <main class=".main">
     <AboutMe />
     <Projects />
   </main>
@@ -19,7 +19,6 @@ import { COLORS } from "../styles/colors";
   .container {
     width: 100%;
     min-height: 100vh;
-    padding-top: 2.5rem;
     padding-left: 1rem;
     padding-right: 1rem;
   }

@@ -11,7 +11,7 @@ interface Props {
 const { tecnologies } = Astro.props;
 ---
 
-<div>
+<div class="tecnologies">
   {
     tecnologies.map((tecnologie) => (
       <picture>
@@ -20,3 +20,18 @@ const { tecnologies } = Astro.props;
     ))
   }
 </div>
+
+<style>
+  .tecnologies {
+    margin-bottom: 0.75rem;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .tecnologies picture {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    background-color: aqua;
+  }
+</style>

@@ -1,16 +1,51 @@
 ---
-
 ---
-<section>
+
+<section class="content_desc">
   <p>
-    Soy Desarrollador de software con experiencia como Desarrollador Front-end,
-    desarrollando diferentes aplicativos para el sector bancario y ambiental
-    bajo metodologías de trabajo ágil. Con conocimientos en herramientas y
-    lenguajes como: ReactJs, React Native, JavaScript, Html5, Css, NodeJs,
-    MongoDB, Bonitasoft y Python. Caracterizado por poseer habilidades de
-    trabajo en equipo, liderazgo, orientación al detalle, orientación a los
-    objetivos, comunicación y adaptabilidad.
+    I'm a <strong>Software Developer</strong> with experience as a <strong
+      >Front-end Developer</strong
+    >, developing different applications for the <strong>banking</strong> and <strong
+      >environmental</strong
+    > sectors under agile work methodologies. With knowledge in tools and languages
+    ​ ​such as: <strong
+      >JavaScript, TypeScript, ReactJs, React Native, Flutter, NodeJs, MongoDB,
+      Bonitasoft and Python</strong
+    >. Characterized by having teamwork skills, leadership, detail orientation,
+    goal orientation, communication and adaptability.
   </p>
 </section>
 
-<style scoped></style>
+<style>
+  strong {
+    font-weight: bold;
+  }
+  .content_desc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .content_desc p {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .content_desc p > span {
+    font-weight: 700;
+  }
+  @media screen and (min-width: 768px) {
+    .content_desc p {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+  }
+  @media screen and (min-width: 1020px) {
+    .content_desc {
+      width: 97%;
+    }
+    .content_desc p {
+      text-align: justify;
+    }
+  }
+</style>

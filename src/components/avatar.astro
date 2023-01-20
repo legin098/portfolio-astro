@@ -12,6 +12,7 @@ import Profile from "../assets/book.jpg";
     height: 8rem;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 1.5rem;
     border-radius: 9999px;
   }
 
@@ -23,6 +24,21 @@ import Profile from "../assets/book.jpg";
 
   @media screen and (min-width: 768px) {
     .picture {
+      width: 12rem;
+      height: 12rem;
+    }
+
+    .picture img {
+      width: 12rem;
+      height: 12rem;
+    }
+  }
+
+  @media screen and (min-width: 1020px) {
+    .picture {
+      margin-top: 0;
+      position: relative;
+      left: -20px;
       width: 12rem;
       height: 12rem;
     }
