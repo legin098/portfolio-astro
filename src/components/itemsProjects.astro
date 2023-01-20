@@ -10,12 +10,13 @@ interface Props {
   id: number;
   title: string;
   desc: string;
+  desc2?: string;
   techs: Array<Tecnologie>;
   code: string;
   liveView: string;
 }
 
-const { code, desc, id, liveView, techs, title } = Astro.props;
+const { code, desc, desc2, liveView, techs, title } = Astro.props;
 ---
 
 <article class="card">
@@ -24,11 +25,17 @@ const { code, desc, id, liveView, techs, title } = Astro.props;
   </h3>
   <p>
     {desc}
+    <br />
+    <cite>{desc2}</cite>
   </p>
   <Tecnologies tecnologies={techs} />
   <div class="container_buttons">
-    <a class="button" href={liveView}><span>Live view</span></a>
-    <a class="button" href={code}><span>Code</span></a>
+    <a class="button" href={liveView} target="_blank"
+      ><span class="text">Live view</span></a
+    >
+    <a class="button" href={code} target="_blank"
+      ><span class="text">Code</span></a
+    >
   </div>
 </article>
 
@@ -39,6 +46,9 @@ const { code, desc, id, liveView, techs, title } = Astro.props;
     border-radius: 0.25rem;
     box-shadow: rgba(164, 195, 178, 0.3) 0px 0px 0px 3px;
     margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
   .card h3 {
@@ -75,8 +85,11 @@ const { code, desc, id, liveView, techs, title } = Astro.props;
     transition: all 0.5s;
     z-index: 1;
     display: flex;
-    justify-content: center;
     align-items: center;
+  }
+
+  .text {
+    margin-left: 8px;
   }
 
   .button::before {

@@ -9,13 +9,14 @@ interface Props {
 }
 
 const { tecnologies } = Astro.props;
+
 ---
 
 <div class="tecnologies">
   {
     tecnologies.map((tecnologie) => (
       <picture>
-        <img src={tecnologie.url} width="25" height="25" alt={tecnologie.alt} />
+        <img src={`/src/${tecnologie.url}.svg`} alt={tecnologie.alt} />
       </picture>
     ))
   }
@@ -23,7 +24,7 @@ const { tecnologies } = Astro.props;
 
 <style>
   .tecnologies {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.85rem;
     display: flex;
     justify-content: flex-start;
   }
@@ -31,7 +32,6 @@ const { tecnologies } = Astro.props;
   .tecnologies picture {
     width: 25px;
     height: 25px;
-    margin-right: 5px;
-    background-color: aqua;
+    margin-right: 10px;
   }
 </style>
